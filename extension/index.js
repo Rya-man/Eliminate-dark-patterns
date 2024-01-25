@@ -63,6 +63,8 @@ async function fetchSiteUrlAndPassToApi() {
         chrome.tabs.create({ url: responseData.newUrl });
     } 
 }
+
+//function to load search engine
 async function SecrchEngine() {
     try {
         // Get the active tab
