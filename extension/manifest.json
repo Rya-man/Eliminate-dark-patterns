@@ -21,6 +21,10 @@
         {
           "matches": ["https://www.flipkart.com/*"],
           "js": ["flipkart.js"]
+        },
+        {
+          "matches": ["https://www.ebay.com/*"],
+          "js": ["ebay.js"]
         }
     ],
     "icons": {
