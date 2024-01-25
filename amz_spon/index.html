@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Pattern Detector</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            width: 300px; /* Adjust the width as needed */
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px; /* Smaller padding for smaller buttons */
+            font-size: 14px; /* Smaller font size */
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 8px; /* Reduced margin */
+            position: relative;
+            width: 200px; /* Make buttons take full width */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>AMZ</h1>
+    </header>
+    <main>
+        <button id="findSponsored">Find Sponsored</button>
+        <button id="remove_money">Remove prices</button>
+        <button id="remove_reviews">Remove reviews</button>
+
+        <button id="fetchSiteUrl">Go to Neutral Site</button>
+        
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
