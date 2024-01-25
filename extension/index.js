@@ -63,6 +63,24 @@ async function fetchSiteUrlAndPassToApi() {
         chrome.tabs.create({ url: responseData.newUrl });
     } 
 }
+async function SecrchEngine() {
+    try {
+        // Get the active tab
+        let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+        // Replace the placeholder API_URL with your actual API endpoint
+        let apiUrl = 'API_URL';
+        let response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ url: "/search-engine" }), // Send the request body
+        });
+        let responseData = await response.json();
+        // Open a new tab with the URL received from the API
+        chrome.tabs.create({ url: responseData.newUrl });
+    } 
+}
 
 //function to remove reviews
 async function remove_reviews() {
@@ -86,3 +104,4 @@ document.getElementById("findSponsored").addEventListener("click", findAndHighli
 document.getElementById("fetchSiteUrl").addEventListener("click", fetchSiteUrlAndPassToApi);
 document.getElementById("remove_money").addEventListener("click", remove_money);
 document.getElementById("remove_reviews").addEventListener("click", remove_reviews);
+document.getElementById("serachEngine").addEventListener("click", SecrchEngine);
